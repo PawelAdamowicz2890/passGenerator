@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="passGenerator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Row="0" Grid.Column="0"
+                    IsChecked="False"
+                    x:Name="chkMaleLitery"/>
+                <Label Grid.Row="0" Grid.Column="1"
+                    TranslationY="10"
+                    Text="małe litery"/>
+                <CheckBox Grid.Row="1" Grid.Column="0"
+                    IsChecked="False"
+                    x:Name="chkDuzeLitery"/>
+                <Label Grid.Row="1" Grid.Column="1"
+                    TranslationY="10"
+                    Text="duże litery"/>
+                <CheckBox Grid.Row="2" Grid.Column="0"
+                    IsChecked="False"
+                    x:Name="chkCyfry"/>
+                <Label Grid.Row="2" Grid.Column="1"
+                    TranslationY="10"
+                    Text="cyfry"/>
+                <CheckBox Grid.Row="3" Grid.Column="0"
+                    IsChecked="False"
+                    x:Name="chkZnakiSpec"/>
+                <Label Grid.Row="3" Grid.Column="1"
+                    TranslationY="10"
+                    Text="znaki specjalne"/>
+                <Entry Grid.Row="4" Grid.Column="0"
+                    x:Name="DlugoscEnt"
+                    Text=""/>
+                <Label Grid.Row="4" Grid.Column="1"
+                    Text="długość"/>
+            </Grid>
+            <Button 
+                WidthRequest="200"
+                Text="Generuj"
+                Clicked="btnGenClicked"/>
+            <Label 
+                HorizontalOptions="Center"
+                Text=""
+                x:Name="hasloLbl"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
