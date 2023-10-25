@@ -44,7 +44,12 @@ namespace passGenerator
                 int passLength;
                 int TypeRand;
                 int CharRand;
-                int.TryParse(DlugoscEnt.Text, out passLength);
+                bool czyLiczba=int.TryParse(DlugoscEnt.Text, out passLength);
+                if(!czyLiczba || passLength<=0)
+                {
+                    hasloLbl.Text = "Długość musi być liczbą całkowitą dodatnią";
+                    return;
+                }
                 for (int i = 0; i < passLength; i++)
                 {
                     TypeRand = TypeSign.Next(0, 4);
@@ -56,7 +61,7 @@ namespace passGenerator
                     else
                         i--;
                 }
-                hasloLbl.Text += wynik;
+                hasloLbl.Text = "Twoje hasło: "+wynik;
                 SemanticScreenReader.Announce(hasloLbl.Text);
             }
            

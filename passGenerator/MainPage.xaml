@@ -5,9 +5,7 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            Spacing="25">
 
             <Grid HorizontalOptions="Center">
                 <Grid.RowDefinitions>
@@ -49,7 +47,8 @@
                     x:Name="DlugoscEnt"
                     Text=""/>
                 <Label Grid.Row="4" Grid.Column="1"
-                    Text="długość"/>
+                    Text="długość"
+                    VerticalOptions="Center"/>
             </Grid>
             <Button 
                 WidthRequest="200"
